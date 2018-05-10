@@ -39,52 +39,7 @@ class Createplayer extends Component {
 
         return (
             <div className="container">
-                <br/>
-                <div className="row">
-                    <div className="col-lg-3">
-                        <Card>
-                            <a href="/Teamdata">
-                                <h2>Team Data</h2>
-                            </a>
-                            <br/>
-                            <br/>
-                            <br/>
-                            <br/>
-                        </Card>
-                    </div>
-                    <br/>
-                    <div className="col-lg-3">
-                        <Card>
-                            <a href="/Createplayer">
-                                <h2>Create Player</h2>
-                            </a>
-                            <a href="/Updateplayer">
-                                <h2>Update Player</h2>
-                            </a>
-                            <a href="/Deleteplayer">
-                                <h2>Delete Player</h2>
-                            </a>
 
-                        </Card>
-                    </div>
-                    <br/>
-                    <div className="col-lg-3">
-                        <Card>
-                            <h2>Graduating Class Data</h2>
-                            <br/>
-                            <br/>
-                            <br/>
-                        </Card>
-                    </div>
-                    <div className="col-lg-3">
-                        <Card>
-                            <h2>Workouts</h2>
-                            <br/>
-                            <br/>
-                            <br/>
-                        </Card>
-                    </div>
-                </div>
                 <section className="">
                     <div className="row">
 
@@ -104,7 +59,7 @@ class Createplayer extends Component {
                                         id: uuidV4()
                                     },
                                     refetchQueries: [{ query: ListPlayers }]
-                                }).then( () => window.location.replace('/Teamdata'))
+                                }).then( () => window.location.replace('/Admin'))
 
                                 // alert('Player Created')
                                 // window.location.replace('/Teamdata')

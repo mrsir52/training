@@ -85,10 +85,10 @@ class Teamdata extends Component {
 
         return (
             <div>
-                <div className="container">
+                <div className="container text-center">
                     <br/>
                     <div className="row">
-                        <div className="col-lg-3">
+                        <div className="col">
                             <Card>
                                 <a href="/Teamdata">
                                     <h3>Team Data</h3>
@@ -100,22 +100,22 @@ class Teamdata extends Component {
                             </Card>
                         </div>
                         <br/>
-                        <div className="col-lg-3 red">
+                        <div className="col">
                             <Card>
                                 <a href="/Createplayer">
                                     <h3>Create Player</h3>
                                 </a>
-                                <a href="/Updateplayer">
-                                    <h3>Update Player</h3>
-                                </a>
-                                <a href="/Deleteplayer">
-                                    <h3>Delete Player</h3>
-                                </a>
+                                {/*<a href="/Updateplayer">*/}
+                                    {/*<h3>Update Player</h3>*/}
+                                {/*</a>*/}
+                                {/*<a href="/Deleteplayer">*/}
+                                    {/*<h3>Delete Player</h3>*/}
+                                {/*</a>*/}
 
                             </Card>
                         </div>
                         <br/>
-                        <div className="col-lg-3">
+                        <div className="col">
                             <Card>
                                 <h3>Graduating Class Data</h3>
                                 <br/>
@@ -123,7 +123,7 @@ class Teamdata extends Component {
                                 <br/>
                             </Card>
                         </div>
-                        <div className="col-lg-3">
+                        <div className="col">
                             <Card>
                                 <h3>Workouts</h3>
                                 <br/>
@@ -136,7 +136,7 @@ class Teamdata extends Component {
                 <br/>
                 <div className="container">
                     <Card>
-                        <div className="container">
+                        <div className="container text-center align-content-center">
                             <div className="row">
                                 <div className="col-lg-8">
                                     <table className="table">

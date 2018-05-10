@@ -48,11 +48,16 @@ export default class Auth {
     //
     //         console.log(authResult)
 
+
+
+
+
+
   handleAuthentication() {
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult);
-        debugger
+
         console.log("result:", authResult.idTokenPayload.sub)
         history.replace('/home');
       } else if (err) {

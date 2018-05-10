@@ -39,7 +39,7 @@ class Profile extends Component {
 
           return (
               <div className="intro">
-                  <div className="container">
+                  <div className="container text-center">
                       <Card className="heatmap-class">
                         <h2>Welcome {profile.given_name}</h2>
                           <h4>Days with workouts or practice</h4>
@@ -60,6 +60,12 @@ class Profile extends Component {
                                   { date: '2018-04-10' },
                                   { date: '2018-04-11' },
                                   { date: '2018-04-12' },
+                                  { date: '2018-04-13' },
+                                  { date: '2018-04-15' },
+                                  { date: '2018-04-16' },
+                                  { date: '2018-04-17' },
+                                  { date: '2018-04-18' },
+                                  { date: '2018-04-22' },
                                   // ...and so on
                               ]}
                           />

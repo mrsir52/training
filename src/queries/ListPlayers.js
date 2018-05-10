@@ -10,6 +10,7 @@ export default graphql`
                 gradClass
                 maxBench
                 maxSquat
+                id
             }
         }
     }

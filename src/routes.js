@@ -10,6 +10,8 @@ import Teamdata from './Pages/Teamdata'
 import Getplayer from './Pages/Getplayer'
 import Createplayer from './Pages/Createplayer'
 import NewProfile from './Profile/NewProfile'
+import Admin from './Pages/Admin'
+import Updateplayer from './Pages/Updateplayer'
 
 // import App from './Notauthenticated';
 
@@ -39,7 +41,10 @@ export default () => (
             <Route path="/Getplayer" render={(props) => <Getplayer auth={auth} {...props} />} />
             <Route path="/Createplayer" render={(props) => <Createplayer auth={auth} {...props} />} />
             <Route path="/Teamdata" render={(props) => <Teamdata auth={auth} {...props} />} />
-            <Route path="/NewProfile" render={(props) => <NewProfile auth={auth} {...props} />} />
+            <Route path="/Admin" render={(props) => <Admin auth={auth} {...props} />} />
+            <Route path="/Updateplayer/:id" render={(props) => <Updateplayer auth={auth} {...props} />} />
+            {/*<Route path="/Profile" render={(props) => <Profile auth={auth} {...props} />} />*/}
+            {/*<Route path="/NewProfile" render={(props) => <NewProfile auth={auth} {...props} />} />*/}
           <Route path="/profile" render={(props) => (
             !auth.isAuthenticated() ? (
               <Redirect to="/home"/>
