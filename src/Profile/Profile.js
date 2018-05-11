@@ -86,9 +86,7 @@ class Profile extends Component {
                               {/*</Card>*/}
                               <br/>
                               <Card className="primary-color">
-                                  <h3>
-                                      Email coach will go here
-                                  </h3>
+                                  <Button color="primary">Email Coach</Button>
                                   <br/>
                                   <br/>
                                   <br/>

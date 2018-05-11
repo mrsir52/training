@@ -3,9 +3,10 @@ import {graphql, Mutation} from 'react-apollo';
 import ListPlayers from '../queries/ListPlayers'
 import { Card } from 'mdbreact'
 import Modal from './ModalPage'
-
+import Updateplayer from '../Pages/Updateplayer'
 
 import MutateDelete from "../Mutations/MutateDelete";
+import Createplayer from "./Createplayer";
 
 
 // import '../Profile/style.css'
@@ -40,6 +41,31 @@ class Admin extends Component {
         // const sort = this.state.players.sort((a, b) => a.firstName - b.firstName);
 
         // MyLocalStorage.add('players', this.props.players)
+
+
+        const sortNames1 = (a, b) => {
+            const aCompare = a.firstName.toLowerCase();
+            const bCompare = b.firstName.toLowerCase();
+
+            if (aCompare < bCompare) return -1;
+            if (aCompare > bCompare) return 1;
+            return 0;
+        }
+
+
+        const sortFirst = () => {
+            console.clear()
+            let players = [...this.props.players].sort(sortNames1)
+            this.setState({players, show: true})
+
+            setTimeout(() => {
+                console.log("pos:", this.state.players)
+            }, 1000)
+
+        }
+
+
+        //---------------------------------------------------------------------------------------
 
         const sortNames = (a, b) => {
             const aCompare = a.position.toLowerCase();
@@ -85,7 +111,7 @@ class Admin extends Component {
 
         //-------------------------------------------------------------------------------------
 
-        const sortNames3 = (a, b) => {
+        const sortGrad = (a, b) => {
             const aCompare = a.gradClass;
             const bCompare = b.gradClass;
 
@@ -95,9 +121,9 @@ class Admin extends Component {
         }
 
 
-        const graduatingClass = () => {
+        const gradClass = () => {
             console.clear()
-            let players = this.state.players.sort(sortNames3)
+            let players = this.state.players.sort(sortGrad)
             this.setState({sortedPlayers: players})
             console.log(players)
 
@@ -160,7 +186,7 @@ class Admin extends Component {
                                         <tr>
                                             <th>First Name</th>
                                             <th onClick={() => {
-                                                lastName()
+                                                sortFirst()
                                             }}>Last Name
                                             </th>
                                             <th onClick={() => {
@@ -168,7 +194,7 @@ class Admin extends Component {
                                             }}>Position
                                             </th>
                                             <th onClick={() => {
-                                                graduatingClass()
+                                                gradClass()
                                             }}>Graduating Class
                                             </th>
                                             <th onClick={() => {
@@ -176,7 +202,7 @@ class Admin extends Component {
                                             }}>Max Squat
                                             </th>
                                             <th onClick={() => {
-                                                maxSquat()
+                                                maxBench()
                                             }}>Max Bench
                                             </th>
                                             <th>Edit</th>
@@ -207,12 +233,17 @@ class Admin extends Component {
                                                                 <td>{player.maxSquat}</td>
                                                                 <td>{player.maxBench}</td>
                                                                 <td>
+                                                                    <a href="/Createplayer">
+                                                                    <button>
                                                                     {/*<a href={`/Updateplayer/${id}`}></a>*/}
                                                                     <i className="fas fa-pen-square m-1"></i>
+                                                                    </button>
+                                                                    </a>
                                                                 </td>
                                                                 <td onClick={e => deletePlayer({variables: {id: player.id}})}>
-
+                                                                    <button>
                                                                     <i className=" fas fa-times-circle m-1"></i>
+                                                                    </button>
                                                                 </td>
                                                             </tr>
                                                         )}
@@ -228,8 +259,6 @@ class Admin extends Component {
                         </div>
                     </Card>
                 </div>
-
-                <Modal />
 
             </div>
         )
