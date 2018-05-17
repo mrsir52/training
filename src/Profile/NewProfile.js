@@ -19,11 +19,6 @@ class NewProfile extends Component {
 
 
     render() {
-        // const { profile } = this.state;
-        // console.log("GQL:", this.props.players)
-        // console.log("render", profile)
-
-
         return (
             <div className="intro">
                 <div className="container">
