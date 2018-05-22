@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {graphql, Mutation} from 'react-apollo';
 import ListPlayers from '../queries/ListPlayers'
 import { Card } from 'mdbreact'
-import Modal from './ModalPage'
+
 import Updateplayer from '../Pages/Updateplayer'
 
 import MutateDelete from "../Mutations/MutateDelete";
