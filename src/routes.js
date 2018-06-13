@@ -9,18 +9,14 @@ import history from './history';
 import Teamdata from './Pages/Teamdata'
 import Getplayer from './Pages/Getplayer'
 import Createplayer from './Pages/Createplayer'
-import NewProfile from './Profile/NewProfile'
 import Admin from './Pages/Admin'
 import Updateplayer from './Pages/Updateplayer'
 
 // import App from './Notauthenticated';
 
 
-// import Playerprofile from './pages/Playerprofile'
-// import Updateplayer from './pages/Updateplayer'
-// import Admin from './pages/Admin'
-// import Teamdata from './pages/Teamdata'
-// import Createplayer from './pages/Createplayer'
+
+
 
 
 const auth = new Auth();
