@@ -105,12 +105,6 @@ class Teamdata extends Component {
                                 <a href="/Createplayer">
                                     <h3>Create Player</h3>
                                 </a>
-                                {/*<a href="/Updateplayer">*/}
-                                    {/*<h3>Update Player</h3>*/}
-                                {/*</a>*/}
-                                {/*<a href="/Deleteplayer">*/}
-                                    {/*<h3>Delete Player</h3>*/}
-                                {/*</a>*/}
 
                             </Card>
                         </div>
